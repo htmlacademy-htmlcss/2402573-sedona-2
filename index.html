@@ -44,7 +44,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <a class="button button-helper" href="#">Хочу сюда!</a>
+              <a class="button" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -118,7 +118,7 @@
           <h2 class="search-offer-title">Заинтересовались?</h2>
           <p class="search-offer-subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
             гостиниц в Седоне</p>
-          <a class="button button-search search-offer-link" href="#">Поиск гостиницы в Седоне</a>
+          <a class="button button-large search-offer-link" href="#">Поиск гостиницы в Седоне</a>
         </section>
 
         <section class="subscription background">
@@ -159,6 +159,70 @@
         </a>
       </footer>
     </div>
+
+    <div class="modal-container ">
+      <div class="modal modal-hotel-search">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-group">
+              <label class="field-label" for="check-in-date">Дата Заезда:</label>
+              <div class="input-wrapper">
+                 <input id="check-in-date" name="check-in-date" class="field-date" type="text"
+                 placeholder="Введите дату" value="27 апреля 2020" required/>
+                 <p class="user-message error-text">Мы не можем отправить вас в прошлое.</p>
+              </div>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="check-out-date">Дата Выезда:</label>
+              <div class="input-wrapper">
+                 <input id="check-out-date" name="check-out-date" class="field-date" type="text"
+                 placeholder="Введите дату" value="1 сентября 2023" required/>
+                 <p class="user-message info-text">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+            </div>
+           <div class="field-group counter">
+  <div class="guest-counter">
+    <label class="field-label" for="adults">Взрослые:</label>
+    <div class="counter-controls">
+      <button type="button" class="counter-button minus">
+        <span class="visually-hidden">Уменьшить</span>
+      </button>
+      <input class="counter-field" id="adults"  name="adults-count" type="number" value="2" min="0">
+      <button type="button" class="counter-button plus">
+        <span class="visually-hidden">Увеличить</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="guest-counter">
+    <div class="with-tooltip">
+      <label class="field-label" for="children">Дети:</label>
+      <div class="tooltip-container">
+        <span class="tooltip-icon" tabindex="0"></span>
+        <p class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+      </div>
+    </div>
+    <div class="counter-controls">
+      <button type="button" class="counter-button minus">
+        <span class="visually-hidden">Уменьшить</span>
+      </button>
+      <input class="counter-field" id="children" name="children-count" type="number" value="2" min="0">
+      <button type="button" class="counter-button plus">
+        <span class="visually-hidden">Увеличить</span>
+      </button>
+    </div>
+  </div>
+</div>
+            <button class="button button-action button-large button-wide" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+
+  </div>
   </body>
 
 </html>
