@@ -1,10 +1,10 @@
 :root {
-	--texts-second: #333;
+	--texts-second: #333333;
 	--texts-error: #ff5757;
 	--texts-hover: #756157;
 	--texts-active: rgba(117, 97, 87, 0.3);
-	--texts-texts-basic: #000;
-	--texts-background-deafault: #fff;
+	--texts-texts-basic: #000000;
+	--texts-background-deafault: #ffffff;
 	--texts-background-small: rgba(255, 255, 255, 0.3);
 	--texts-background-hover: rgba(255, 255, 255, 0.6);
 	--texts-background-active: rgba(255, 255, 255, 0.3);
@@ -15,12 +15,12 @@
 	--buttons-brown-hover: #615048;
 	--buttons-blue-hover: #68a2ca;
 	--buttons-green-hover: #6c9e42;
-	--background-basic-1: #fff;
+	--background-basic-1: #ffffff;
 	--background-basic-2: rgba(0, 0, 0, 0.3);
 	--background-basic-3: #82b3d3;
 	--background-second-1: rgba(131, 179, 211, 0.12);
 	--background-second-2: rgba(131, 179, 211, 0.2);
-	--icons-basic: #000;
+	--icons-basic: #000000;
 	--icons-second: #83b3d3;
 	--icons-text: #7db54f;
 	--icons-hover: #756157;
@@ -245,6 +245,12 @@ body {
   cursor: default;
 }
 
+.filter-button-reset:disabled {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
 .button:active {
   color: var(--texts-background-active);
 }
@@ -359,7 +365,7 @@ body {
 }
 
 .advantages-item-small {
-  padding: 112px 85px;
+  padding: 112px 84px;
 }
 
 .advantages-image {
@@ -554,7 +560,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   background-color: var(--forms-elements-2);
-  color: #000;
+  color: var(--texts-texts-basic);
   border: none;
   border-radius: 4px 0 0 4px;
 }
@@ -943,6 +949,15 @@ body {
   border-radius: 5px;
   background-color: var(--texts-background-deafault);
   cursor: pointer;
+}
+
+.range-toggle:hover {
+  cursor: pointer;
+}
+
+.range-toggle:active {
+  cursor: pointer;
+  outline: 2px solid var(--background-basic-3);
 }
 
 .min-price-toggle {
@@ -1478,7 +1493,7 @@ body {
   left: 50%;
   width: 12px;
   height: 2px;
-  background-color: #ccc;
+  background-color: #cccccc;
   transform: translate(-50%, -50%);
   transition: background-color 250ms;
 }
@@ -1497,12 +1512,12 @@ body {
 
 .counter-button:hover::before,
 .counter-button:hover::after {
-  background-color: #000;
+  background-color: var(--texts-texts-basic);
 }
 
 .counter-button:active::before,
 .counter-button:active::after {
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 .tooltip-container {
   position: relative;
@@ -1531,7 +1546,7 @@ body {
   display: none;
   width: 256px;
   background-color: var(--texts-second);
-  color: #fff;
+  color: var(--texts-background-deafault);
   padding: 15px 18px 18px 22px;
   border-radius: 10px;
   font-size: 16px;
