@@ -13,7 +13,7 @@
   <body>
     <div class="page-container">
       <header class="main-header">
-        <a class="main-header-link" aria-current="page">
+        <a class="main-header-link" href="index.html" aria-current="page">
           <img class="main-header-logo" src="images/sedona-logo.svg" alt="Логотип сайта о городе Седона" width="140"
             height="70">
         </a>
@@ -63,7 +63,7 @@
             <p class="advantages-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
           </div>
           <ul class="advantages-list">
-            <li class="advantages-item item-dark">
+            <li class="advantages-item item-dark advantages-item-large">
               <div class="advantages-text-content">
                 <h3 class="advantages-item-title">Настоящий городок</h3>
                 <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
@@ -83,7 +83,7 @@
               <h3 class="advantages-item-title title-wrap">Мало туристов</h3>
               <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="advantages-item item-dark">
+            <li class="advantages-item item-dark advantages-item-large-reverse">
               <div class="advantages-text-content">
                 <h3 class="advantages-item-title">Там есть мост дьявола</h3>
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -120,7 +120,7 @@
           <h2 class="search-offer-title">Заинтересовались?</h2>
           <p class="search-offer-subtitle">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения
             гостиниц в Седоне</p>
-          <a class="button button-large search-offer-link" href="#">Поиск гостиницы в Седоне</a>
+          <button class="button button-large search-offer-link" type="button">Поиск гостиницы в Седоне</button>
         </section>
 
         <section class="subscription background">
@@ -166,7 +166,7 @@
       </footer>
     </div>
 
-    <div class="modal-container modal-container-hidden" data-test="modal">
+    <div class="modal-container modal-container-hidden">
       <div class="modal modal-hotel-search">
         <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть окно</span>
@@ -177,7 +177,7 @@
             <div class="field-group">
               <label class="field-label" for="check-in-date">Дата Заезда:</label>
               <div class="input-wrapper">
-                <input id="check-in-date" name="check-in-date" class="field-date" type="text" placeholder="Введите дату"
+                <input class="field-date" id="check-in-date" name="check-in-date" type="text" placeholder="Введите дату"
                   value="27 апреля 2020" required>
                 <p class="user-message error-text">Мы не можем отправить вас в прошлое.</p>
               </div>
@@ -185,7 +185,7 @@
             <div class="field-group">
               <label class="field-label" for="check-out-date">Дата Выезда:</label>
               <div class="input-wrapper">
-                <input id="check-out-date" name="check-out-date" class="field-date" type="text"
+                <input class="field-date" id="check-out-date" name="check-out-date" type="text"
                   placeholder="Введите дату" value="1 сентября 2023" required>
                 <p class="user-message info-text">На эти даты есть свободные номера. Пока есть.</p>
               </div>
@@ -196,11 +196,11 @@
 
                 <label class="field-label" for="adults">Взрослые:</label>
                 <div class="counter-controls">
-                  <button type="button" class="counter-button minus">
+                  <button class="counter-button minus" type="button">
                     <span class="visually-hidden">Уменьшить</span>
                   </button>
                   <input class="counter-field" id="adults" name="adults-count" type="number" value="2" min="0">
-                  <button type="button" class="counter-button plus">
+                  <button class="counter-button plus" type="button">
                     <span class="visually-hidden">Увеличить</span>
                   </button>
                 </div>
@@ -216,18 +216,18 @@
                   </div>
                 </div>
                 <div class="counter-controls">
-                  <button type="button" class="counter-button minus">
+                  <button class="counter-button minus" type="button">
                     <span class="visually-hidden">Уменьшить</span>
                   </button>
                   <input class="counter-field" id="children" name="children-count" type="number" value="2" min="0">
-                  <button type="button" class="counter-button plus">
+                  <button class="counter-button plus" type="button">
                     <span class="visually-hidden">Увеличить</span>
                   </button>
                 </div>
                 </div>
               </div>
              </div>
-            <button class="button button-action button-large button-wide" type="submit">Найти</button>
+            <button class="button button-action button-wide" type="submit">Найти</button>
           </form>
         </section>
       </div>
